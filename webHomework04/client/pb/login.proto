@@ -1,0 +1,17 @@
+syntax = "proto3";
+package login;
+option go_package =".;login";
+
+message LoginReq{
+  string username =1;
+  string  password= 2;
+}
+message LoginRes{
+  string username =1;
+  string password= 2;
+  bool OK=3;
+}
+
+service SearchService {
+  rpc Search(LoginReq) returns(LoginRes){};
+}
