@@ -45,7 +45,7 @@ func main() {
 			}
 			rnd := rand.New(rand.NewSource(time.Now().UnixNano()))
 			name := fmt.Sprintf("%06v", rnd.Int31n(1000000))
-			err = ioutil.WriteFile(fmt.Sprintf("C:/Users/诚/Desktop/picture/%s 1_%d.jpg", name, i), all, 0644)
+			err = ioutil.WriteFile(fmt.Sprintf("C:/Users/诚/Desktop/picture/%s 1_%d.jpg", name, i), all, 0644)//注意一下路径
 			if err != nil {
 				panic(err)
 				return
